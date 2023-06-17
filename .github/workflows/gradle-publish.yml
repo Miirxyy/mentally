@@ -42,11 +42,16 @@ jobs:
 
       - name: Build with Gradle
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+          with:
+            cache-key: v6-gradle|Linux|build[37a6259cc0c1dae299a7866489dff0bd]-${{ github.sha }}
+
         with:
           arguments: build
 
       - name: Publish to GitHub Packages
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+         with:
+            cache-key: v6-gradle|Linux|build[37a6259cc0c1dae299a7866489dff0bd]-${{ github.sha }}
         with:
           arguments: publish
         env:
