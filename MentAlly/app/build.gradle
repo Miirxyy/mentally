@@ -50,4 +50,14 @@ dependencies {
 
 }
 //added all firebase implementations to easily connect the app to the firebase database.
+plugins {
+  id "org.sonarqube" version "4.2.1.3168"
+}
 
+sonarqube {
+  properties {
+    property "sonar.projectKey", "Miirxyy_mentally"
+    property "sonar.organization", "miirxyy"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
